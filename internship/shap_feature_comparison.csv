@@ -1,0 +1,60 @@
+feature,Decision_Tree,Logistic_Regression
+cat__OverTime_Yes,0.06832982319834112,0.3681388318648947
+num__TotalWorkingYears,0.04736843365378069,0.4160040257088207
+num__Age,0.02970144088049052,0.334099712728303
+num__MonthlyIncome,0.024731053085991272,0.2633659850828568
+num__NumCompaniesWorked,0.023009690347782188,0.4128245132705117
+cat__MaritalStatus_Single,0.02255437191420566,0.20624312007885529
+num__DailyRate,0.018821642971325422,0.1589936040456758
+num__WorkLifeBalance,0.01359720219014531,0.22495908606757165
+num__EnvironmentSatisfaction,0.01285788960840854,0.4282717799168724
+cat__JobRole_Research Scientist,0.010214818877040104,0.05852986495117527
+num__HourlyRate,0.007906926117421578,0.008712191087814118
+num__YearsInCurrentRole,0.006111461075565468,0.3301749537187685
+cat__OverTime_No,0.005243042940596886,0.3739598040320487
+num__YearsSinceLastPromotion,0.002482447571205948,0.42394489049368894
+cat__Gender_Male,0.0,0.07233268323003303
+cat__EducationField_Other,0.0,0.07299931343151539
+cat__EducationField_Technical Degree,0.0,0.06008218449205712
+cat__BusinessTravel_Travel_Frequently,0.0,0.2863660811241416
+cat__BusinessTravel_Non-Travel,0.0,0.13619109486339512
+cat__Department_Human Resources,0.0,0.0006481652014617433
+cat__Department_Research & Development,0.0,0.142471025302496
+cat__Department_Sales,0.0,0.12834339696894245
+cat__EducationField_Human Resources,0.0,0.02051540713457073
+cat__EducationField_Life Sciences,0.0,0.05621172057395295
+cat__EducationField_Marketing,0.0,0.019704384758377144
+cat__EducationField_Medical,0.0,0.13165400008561332
+cat__BusinessTravel_Travel_Rarely,0.0,0.0008719223816050903
+cat__JobRole_Sales Representative,0.0,0.08083269271667054
+cat__JobRole_Sales Executive,0.0,0.051758592177594716
+cat__JobRole_Research Director,0.0,0.0944571127559815
+cat__JobRole_Manufacturing Director,0.0,0.09526127976688803
+cat__JobRole_Laboratory Technician,0.0,0.27645559802395514
+cat__JobRole_Manager,0.0,0.016729710094104053
+cat__JobRole_Human Resources,0.0,0.02189243247957486
+cat__JobRole_Healthcare Representative,0.0,0.10531430450466578
+cat__IncomeBand_High,0.0,0.01233354378929601
+cat__IncomeBand_MedLow,0.0,0.05536547231432453
+cat__IncomeBand_MedHigh,0.0,0.021216452240555374
+cat__IncomeBand_Low,0.0,0.10572210387937213
+cat__Gender_Female,0.0,0.07939539735190333
+cat__MaritalStatus_Divorced,0.0,0.0870147270520653
+cat__MaritalStatus_Married,0.0,0.09891549449935463
+cat__Over18_Y,0.0,0.0
+num__JobLevel,0.0,0.21293755110350351
+num__JobInvolvement,0.0,0.306910772171351
+num__EmployeeCount,0.0,0.0
+num__EmployeeNumber,0.0,0.018939949792260147
+num__Education,0.0,0.010518525494341457
+num__DistanceFromHome,0.0,0.3018618183626129
+num__JobSatisfaction,0.0,0.3772735344233332
+num__MonthlyRate,0.0,0.005250341774713318
+num__StandardHours,0.0,0.0
+num__RelationshipSatisfaction,0.0,0.22881839003262777
+num__PerformanceRating,0.0,0.06532395563700388
+num__PercentSalaryHike,0.0,0.10195012004315236
+num__TrainingTimesLastYear,0.0,0.15926810126095844
+num__StockOptionLevel,0.0,0.2454960246885535
+num__YearsAtCompany,0.0,0.14623240199225487
+num__YearsWithCurrManager,0.0,0.362983425461825
