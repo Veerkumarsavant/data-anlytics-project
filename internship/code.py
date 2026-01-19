@@ -1,6 +1,5 @@
 # HR Analytics - Predict Employee Attrition
 # Author: Veerkumar Savant
-# Updated: Fixed bugs, improved robustness, added enhancements
 
 import pandas as pd
 import numpy as np
@@ -40,16 +39,12 @@ print(f"Overall attrition rate: {attrition_rate:.2f}%")
 # 2️⃣ Basic EDA
 dept_tab = df.groupby('Department')['Attrition_num'].agg(['mean', 'count']).reset_index()
 print("\nAttrition by Department:\n", dept_tab)
-
-# Create income bands
 df['IncomeBand'] = pd.cut(df['MonthlyIncome'],
                           bins=4,
                           labels=['Low', 'MedLow', 'MedHigh', 'High'])
 
 income_tab = df.groupby('IncomeBand')['Attrition_num'].mean().reset_index()
 print("\nAttrition by Income Band:\n", income_tab)
-
-# Plots
 plt.figure(figsize=(6,4))
 sns.barplot(x='Department', y='Attrition_num', data=df)
 plt.title('Attrition by Department')
@@ -64,8 +59,6 @@ plt.title('Attrition by Income Band')
 plt.tight_layout()
 plt.savefig("attrition_by_income.png")
 plt.close()
-
-# 3️⃣ Preprocessing & Split
 X = df.drop(['Attrition', 'Attrition_num'], axis=1)  # Drop both original and numeric target
 y = df['Attrition_num']
 
@@ -171,9 +164,6 @@ log_model.fit(X_train, y_train)
 y_pred_proba_tree = tree_model.predict_proba(X_test)[:, 1]
 y_pred_proba_log = log_model.predict_proba(X_test)[:, 1]
 
-# ============================================================
-# 3️⃣ SHAP for Decision Tree
-# ============================================================
 
 print("🔍 Running SHAP for Decision Tree...")
 
@@ -238,9 +228,6 @@ plt.tight_layout()
 plt.savefig("shap_feature_importance_log.png")
 plt.close()
 
-# ============================================================
-# 5️⃣ Compare SHAP Importances Side by Side
-# ============================================================
 
 comparison_df = pd.merge(
     feat_imp_tree[['feature', 'mean_abs_shap']].rename(columns={'mean_abs_shap': 'Decision_Tree'}),
@@ -250,10 +237,6 @@ comparison_df = pd.merge(
 ).fillna(0).sort_values(by='Decision_Tree', ascending=False)
 
 comparison_df.to_csv("shap_feature_comparison.csv", index=False)
-
-# ============================================================
-# 6️⃣ Model Metrics
-# ============================================================
 
 metrics = {
     'Model': ['Logistic Regression', 'Decision Tree'],
@@ -266,16 +249,8 @@ metrics = {
 metrics_df = pd.DataFrame(metrics)
 metrics_df.to_csv("model_metrics.csv", index=False)
 
-# ============================================================
-# 7️⃣ Save SHAP Values for Future Use
-# ============================================================
-
 np.save("shap_values_tree.npy", shap_values_tree_class1)
 np.save("shap_values_log.npy", shap_values_log)
-
-# ============================================================
-# ✅ Done
-# ============================================================
 
 print("\n✅ SHAP analysis complete! All plots, CSVs, and metrics saved.")
 print("📂 Generated files:")
@@ -285,3 +260,4 @@ print("- shap_summary_log.png")
 print("- shap_feature_importance_log.png")
 print("- shap_feature_comparison.csv")
 print("- model_metrics.csv")
+
